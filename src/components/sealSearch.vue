@@ -9,7 +9,7 @@ export default {
   data () {
     return {
       hasNoAddress:false,
-      updateCartData:"c罗",
+      updateCartData:"c罗123",
       Cluo:"",
     }
   },
