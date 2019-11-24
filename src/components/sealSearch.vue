@@ -9,7 +9,7 @@ export default {
   data () {
     return {
       hasNoAddress:false,
-      updateCartData:"",
+      updateCartData:"c罗",
       Cluo:"",
     }
   },
@@ -17,26 +17,28 @@ export default {
       toApple:function(){
         var updateCart01 = function (data) {
           return new Promise(function (resolve, reject) {
-
               resolve(data);
-
-
-
-
           })
         }
-        if(this.hasNoAddress){
-          this.$message({
-            message: '请补全收货地址',
-            type: 'warning'
+        var updateCart02 = function (data) {
+          return new Promise(function (resolve, reject) {
+              resolve(data);
           })
-        }else{
-          updateCart01("this.updateCartData").then(res => {
-            return updateCart01(this.updateCartData)
-          }).then(res => {
-            this.Cluo = res
-            console.log(this.Cluo)
-          })
+        }
+        
+        updateCart01(this.updateCartData).then(res => {
+          console.log(res)
+          return updateCart02(res + "0202")
+        }).then(res => { 
+        
+          console.log(res)
+        }).then(res => {
+
+        }).then(res => {
+          
+        }).then(res => {
+          
+        })
 
           // // 更新购物车
           // let sendList=JSON.stringify(this.goodsList)
@@ -44,15 +46,13 @@ export default {
             //     openId:localStorage.getItem('openId'),
           //     goodsJson:sendList
           // }).then(res=>{
-            this.updateCartData = "c罗";
+            // this.updateCartData = "c罗";
           // })
-          function test(){
-
-          }
-            console.log(this.Cluo)
+          // console.log(this.Cluo)
+     
 
 
-        }
+        
       }
   }
 }
