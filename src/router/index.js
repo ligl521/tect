@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import booksh from '@/components/sealSearch'
-
+import home from '@/pages/home/home'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
-      name: 'booksh',
-      component: booksh
+      name: 'home',
+      component: home,
+	　 
     }
   ]
 })
