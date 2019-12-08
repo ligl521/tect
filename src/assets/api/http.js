@@ -1,5 +1,6 @@
 import axios from 'axios';
 import QS from 'qs';
+import {consoleError} from '@/assets/api/errorReporting.js'
 
 /**
  * get方法，对应get请求
@@ -12,9 +13,13 @@ export function get(url, params) {
         params: params
       })
       .then(res => {
-        resolve(res.data);
+        if(res.data.code == "500"){
+          consoleError(params,url,res)
+        }
+        resolve(res.data)
       })
       .catch(err => {
+        consoleError(params, url, err)
         reject(err.data)
       })
   });
@@ -28,9 +33,13 @@ export function post(url, params) {
   return new Promise((resolve, reject) => {
     axios.post(url, QS.stringify(params))
       .then(res => {
+        if(res.data.code == "500"){
+          consoleError(params, url, res)
+        }
         resolve(res.data);
       })
       .catch(err => {
+        consoleError(params,url, err)
         reject(err.data)
       })
   });

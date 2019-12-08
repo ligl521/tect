@@ -9,14 +9,17 @@ export default {
   name: 'App',
   methods:{
     goLogin(){
-      this.$router.push({path:'/login'});
+
+      // this.$router.push({path:'/login'});
     }
   },
   watch: {//使用watch 监听$router的变化
     $route(to, from) {
-      if(!localStorage["userName"]){
-        this.goLogin()
-      }
+      console.log(to)
+      console.log(from)
+      // if(!localStorage["userName"]){
+      //   this.goLogin()
+      // }
     }
   }
 }
@@ -30,7 +33,6 @@ html,body{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   width: 100%;
   height: 100%;

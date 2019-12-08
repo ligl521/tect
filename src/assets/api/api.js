@@ -1,7 +1,7 @@
 import {
   get,
   post
-} from '@/api/http'
+} from '@/assets/api/http'
 
 //商城 发票管理  /Invoice/del.do
 export const getInvoiceDel = p => get('/Invoice/del.do', p)
