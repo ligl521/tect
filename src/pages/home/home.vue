@@ -1,6 +1,15 @@
 <template>
   <div>
     <button @click="btn">tijaio</button>
+    <button @click="btn">tijaio</button>
+    <button @click="btn">tijaio</button>
+    <button @click="btn">tijaio</button>
+    <button @click="btn">tijaio</button>
+    <button @click="btn">tijaio</button>
+    <button @click="btn">tijaio</button>
+
+    <button @click="btn">tijaio</button>
+    <button @click="btn">tijaio</button>，了么五官科方面赶快来仍可乱扔快乐
   </div>
 </template>
 <script>
